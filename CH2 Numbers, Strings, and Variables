@@ -1,0 +1,49 @@
+# Main Types of Objects Covered here:
+#booleans
+#integers
+#floats
+#strings
+
+# everything in Python is implemented as an object.
+# the type of object determines if it's mutable or immutable
+
+type()  
+# if you want to know the type of anything (literal value, variable, etc.)
+
+# Numbers: simple math operators incuding
++
+-
+*
+/     # floating point division:  7 / 2 returns 3.5
+//    # integer truncating division:  7 // 2 returms 3
+%     # modulus (remainder):        7 % 3 returns 1
+**    # exponential:                3**4 returns 81 
+
+# combining operators
+-=    # so a-= 3 is the same thing as saying a = a- 3
+*=    # so a*=3 is the same thing as saying a = a * 3
+a /=  # so a/=3 is the same thing as sayin a = a / 3
+
+# ex: a = 10, a-=2, a becomes 8
+
+# Type Conversions: 
+int()   # changes other Python data types to an integer: int(99.5) returns 99
+        # use on strings too: int('99') returns 99
+ 
+float()  # changes to float, so float(99) returns 99.0
+
+str()   #changes to a string, so str(99) returns '99'
+
+#Escape Characters: use \
+\n  #returns a new line
+\t  #returns a new tab
+
+# combine strings with +   : "Good evening" + "how are you, Trapman?" returns "Good evening how are you, Trapman?"
+
+# Slicing: use []
+[ start : end : step] format
+[:] extracts everthing
+[start :] specifies the start to the end
+[: end]   specifies from the beginning to the end (up to but not including)
+[start : end]
+[start : end : step] specifies from the begining to the end, skipping characters by step
