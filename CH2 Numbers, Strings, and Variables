@@ -78,3 +78,24 @@ count()         # returns the number of time a specific string appears
 isalnum()       # checks to see if all characters are either letters or numbers; will return False if things like punctuation characters
 
 # Case and Alignment
+strip()
+trap_intel = 'we're taking the Sixers, Lakers, Rockets, Jazz...'   # we want to remove the . from the string
+trap_intel.strip('.')   # returns 'we're taking the Sixers, Lakers, Rockets, Jazz'
+
+capitalize()  # capitalizes the first word
+trap_intel.capitalize()   # returns 'We're taking...'
+title()       #capitalizes all the words
+trap_intel.title()   # returns 'We're Taking The Sixers...'
+upper()   #converts all characters to uppers
+lower()
+swapcase()  # swaps upper- and lowercase
+center()
+ljustify()
+rjustify()
+
+#Subtitute with replace()
+# use for simple string subsitution. Give it the old substring, the new one, and how many instances of the old it should replace
+# if you don't specifIc the number of instances to be replaced, it'll replace all by default.
+trap_intel.replace('tomo', 'tezos') #swaps out all instances of tomo with tezos
+tran_intel.replace('tomo', 'tezos', 10) # swaps out 10 instances of tomo with tezos, leaves the rest
+
