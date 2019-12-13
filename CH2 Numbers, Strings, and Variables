@@ -52,3 +52,29 @@ str()   #changes to a string, so str(99) returns '99'
 
 # split()
 # use to break a string into a list of smaller strings
+coffee = 'la colombe coffee,elixr coffee,joe coffee,ultimo coffee'
+coffee.split(',')
+# returns ['la colombe coffee', 'elixr coffee', 'joe coffee', 'ultimo coffee']
+# if you don't specify split(), then the () just uses any type of white space characters (new lines, spaces, and tabs)
+# coffee.split()
+# returns ['la', 'colombe', 'coffee', 'elixr', 'coffee'...]
+
+#join()
+# basically the opposite of split
+# it collapses a list of strings into a single string
+# string.join(list)
+crypto_list = ['btc', 'eth', 'tomo']
+crypto_string = ','.join(crypto_list)
+print('Best projects in blockchain right now:', crypto_string)
+
+# some common string functions:
+[]  # slicing
+len()
+startswith()    # crypto_list.startswith('btc'), returns True
+endswith()
+find()          # word = 'tomo', crypto_list.find(word), returns 2 (which is the position/offset of tomo in the list)
+rfind()         # finds the position/offset of the last string 
+count()         # returns the number of time a specific string appears
+isalnum()       # checks to see if all characters are either letters or numbers; will return False if things like punctuation characters
+
+# Case and Alignment
