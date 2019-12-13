@@ -47,3 +47,8 @@ str()   #changes to a string, so str(99) returns '99'
 [: end]   specifies from the beginning to the end (up to but not including)
 [start : end]
 [start : end : step] specifies from the begining to the end, skipping characters by step
+
+# len()
+
+# split()
+# use to break a string into a list of smaller strings
