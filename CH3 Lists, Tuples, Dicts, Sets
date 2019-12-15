@@ -40,3 +40,11 @@ list('Mega') # returns ['M', 'e', 'g', 'a']
       
 # use slice[:] to extra items by offset range
       nba_intel[1:2] # returns ['lakers', 'bucks']
+      
+# append()  adds an item to the end of a list
+      nba_intel.append('spurs')    # returns  ['lakers', 'bucks', 'spurs']
+      
+# extend() or +=  to combine lists
+      nba_intel.extend(nfl_intel)  # returns ['lakers', 'bucks', 'spurs', 'patriots', 'eagles', 'chiefs']
+      OR
+      nba_intel += nfl_intel
