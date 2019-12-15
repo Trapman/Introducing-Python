@@ -1,0 +1,42 @@
+#lists   can be changed
+#tuples  are immutable
+
+#(1) Lists
+# good for keeping track of things by their order, especially when the order and the contents can change 
+# you can always make changes by adding/deleting/overwriting any of the list's contents
+# create with [] or list()
+empty_list = []
+parlay = ['rockets', 'lakers', 'bucks']
+# OR
+# make_an_empty_list = list()
+
+#list() converts other data types to lists:
+list('Mega') # returns ['M', 'e', 'g', 'a']
+# convert a tuple into a list: 
+      a_tuple = ('brad', 'mega', 'comas')
+      list(a_tuple)
+      # returns ['brad', 'mega', 'comas']
+# use split() to chop a string up into a list:
+    birthday = '5/26/84'
+    birthday.split('/')
+     # returns ['5', '26', '84']
+# use indexing [] to grab a single value from a list
+      trap_nfl_intel = ['patriots', 'eagles', 'steelers']
+      trap_nfl_intel[0]   # returns 'patriots'
+      
+#Lists of Lists
+# lists can contains a bunch of different elements, including other lists
+      nba_intel = ['sixers', 'bucks', 'rockets']
+      nfl_intel = ['patriots', 'eagles', 'chiefs']
+      weekly_intel = [nfl_intel, nba_intel]
+      # use slicing:
+          weekly_intel[0]   # returns nfl_intel
+          weekly_intel[0][0] # returns 'patriots'
+       
+# change an item in a list by []
+      nba_intel = ['sixers', 'rockets', 'bucks']
+      nba_intel[1] = 'lakers'
+      # returns ['sixers', 'lakers', 'bucks']
+      
+# use slice[:] to extra items by offset range
+      nba_intel[1:2] # returns ['lakers', 'bucks']
