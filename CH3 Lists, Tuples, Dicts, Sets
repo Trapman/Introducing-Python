@@ -81,3 +81,91 @@ list('Mega') # returns ['M', 'e', 'g', 'a']
       
 # reorder items using sort()
       sorted(nba_intel)  # returns the list sorted by their values (e.g. in this case alphabetical order)
+      # use sort(reverse=True) if you want it to be ordered the other way around
+      # use sorted_nba_intel = sorted(nba_intel) if you just want a copy and to preserve the original list
+      
+# Get length by using len()
+      len(nba_intel) # returns 4
+      
+# Assign with = , Copy with copy()
+      # when you assign one list to more than one variable, then changing the list in one place changes it in the other
+      a = [1, 2, 3]
+      b = a
+      a[0] = 'bill'
+      # when we make this change to [0], it's applied to both a and b. If we call either it'll return ['bill', 2, 3]
+      # you can copy the values of a list to an independent list by using any of these methods:
+            #1 copy() function
+            #2 list() conversion function
+            #3 list slice [ : ]
+            
+      a = [1, 2, 3]
+      b = a.copy()
+      c = list(a)
+      d = a[:]
+      # all of these are independent copies of a so we can edit them without affecting a
+      
+# Tuples: create using tuple()
+      #again unlike lists, tuples are immutable and can't be changed so you can't add/delete/etc from them
+      
+      empty_tuple = ()
+      # to make a tuple with one element at a time, follow each element with a comma
+      one_nba_intel = 'Lakers',
+      one_nba_intel # returns ('Lakers',)
+      # to make a tuple with more than one element at a time, follow all but the last element with a comma
+      all_nba_intel = 'Lakers', 'Sixers', 'Spurs', 'Heat', 'Rockets
+      
+      # tuples allow you to assign mulitple variable at once:
+      a, b, c, d, e = all_nba_intel
+      a #returns 'Lakers'
+      b #returns 'Sixers' and so forth
+      # this is called TUPLE UNPACKING
+      
+      # tuple() conversion functions makes tuples from other things
+      nba_intel = ['Lakers', 'Sixers', 'Heat']
+      tuple(nba_intel) # returns ('Lakers', 'Sixers', 'Heat')
+      
+# Dictionaries: use {}
+      # similar to a list, but the order of the items doesn't matter and they aren't selected by an offset
+      # use key, value pairs 
+      # dicts are mutable so you can add/del/etc and change them
+      
+      empty_dict = {}   # create with {}
+      
+      # use dict() function to convert two-value sequences into a dictionry. First item is used as the key, the second is the value
+      nba_intel_rankings = [ [1, 'lakers'], [2, 'clippers'], [3, 'bucks']
+      dict(nba_itel_rankings)
+            # returns {1: 'lakers', 2: 'clippers', 3: 'bucks'}
+      # we will use zip() later on to do this two-item sequence dict creation easier
+      
+      # add or change an item by KEY
+            # just refer to the item by its key and assign a new value
+            team_names = {
+                        'Shuttleworth': 'David',
+                        'Sutton': 'William',
+                        'DeStefano': 'Bradley'
+                        }
+            # change a value:
+            team_names['Sutton'] = 'Noke'
+       # reminder: dict keys MUST BE UNIQUE
+       
+       # combine dicts with UPDATE()
+            # copies the keys and values of one dict into another dict
+            team_names_new = {
+                           'Comas': 'Daniel'
+                           'Gulli': 'Dom'
+                           }
+           team_names.update(team_names_new)
+           
+      # delete an item by key with DEL
+      del team_names['DeStefano']
+      
+      # delete all items by using CLEAR()
+      team_names.clear()
+      # team_names becomes {}
+      
+      # test for the existence of a key by using IN
+      'Sutton' in team_names # returns True
+      
+      
+      
+      
