@@ -166,6 +166,51 @@ list('Mega') # returns ['M', 'e', 'g', 'a']
       # test for the existence of a key by using IN
       'Sutton' in team_names # returns True
       
+      # Get an item by key
+      team_names['Shuttleworth'] # returns 'David'
+            # you can also use the GET() function, which will work even if the key doesn't exist
+            team_names.get('Comas') #returns 'Dan'
+            team_names.get('Le') # returns None
+            
+      # Get all keys by using KEYS()
+      team_names.keys()  
+            # returns dict_keys(['Shuttleworth', 'Comas', 'DeStefano'])
+                  # note that python 3 by default returns it in this form like dict_keys
+                  # if you want a list, then use something like this: list( team_names.keys() )
+                        # this will return ['Shuttleworth', 'Comas', 'DeStefano'] and without all the dict_keys[()] stuff
+                        
+      # Get all values using VALUES()
+      team_names.values()
+            #returns ['David', 'Daniel', 'Bradley']
+            
+      # Get all key-value pairs using ITEMS()
+      team_names.items()
+            #returns [('Shuttleworth', 'David'), ('Comas', 'Daniel'), ('DeStefano', 'Bradley')]
+            # in other words it returns each key value as a tuple, such as ('key', 'value')
+            
+      Assign with =, copy with copy()
+      coffee_shops = {'great' : 'la colombe', 'decent': 'joe'}
+      coffee_shops['bad'] = 'Dunkin Donuts'
+            # now coffee_shops = {'great' : 'la colombe', 'decent': 'joe', 'bad' : 'Dunkin Donuts'}
+      original_coffee_shops = coffee_shops.copy()
+      
+#Sets: use SET()
+      # a set is like a dict with its values thrown away, leaving only the keys.
+      # just like with dicts, each key must be unique
+      # you really only use a set if you want to know that something exists, and nothing else about it. 
+      # you use a dict when you want to attach some info to the key as a value
+      
+      # to create a set, you can use set() function or you can use {}
+      empty_set = set()
+      OR
+      even_numbers = {0, 2, 4, 6, 8}
+      
+      # convert other data types with set()
+      set( 'letters')    # string converted to set
+            #returns {'l', 'e', 't', 't', 'e', 'r', 's'}
+      set( ['Sixers', 'Spurs', 'Lakers'] )   # list converted to set 
+            # returns {'Sixers', 'Spurs', 'Lakers'}
+      set( ('Sixers', 'Spurs', 'Lakers') ) # tuple converted to set
       
       
       
