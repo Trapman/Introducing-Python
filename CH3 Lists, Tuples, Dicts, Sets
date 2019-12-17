@@ -212,5 +212,16 @@ list('Mega') # returns ['M', 'e', 'g', 'a']
             # returns {'Sixers', 'Spurs', 'Lakers'}
       set( ('Sixers', 'Spurs', 'Lakers') ) # tuple converted to set
       
+      # test for value by using IN
+            #most common use of a set
+            drinks = {
+                  'martini': {'vodka', 'vermouth'},
+                  'manhattan' : {'rye', 'bitters', 'vermouth'},
+                  'screwdriver' : {'orange juice', 'vodka'}
+                  }
+           for name, contents in drinks.items():
+                  if 'vodka' in contents:
+                        print(name)
+      
       
       
