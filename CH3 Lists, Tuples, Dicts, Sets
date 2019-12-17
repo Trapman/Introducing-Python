@@ -48,3 +48,36 @@ list('Mega') # returns ['M', 'e', 'g', 'a']
       nba_intel.extend(nfl_intel)  # returns ['lakers', 'bucks', 'spurs', 'patriots', 'eagles', 'chiefs']
       OR
       nba_intel += nfl_intel
+      
+# add an item by offset with insert()
+      # when you use append(), it adds item only to the end of a list. So if you want to add an item in a specific spot, use insert()
+      nba_intel.insert(0, 'heat')    # adds 'heat' to offset 0
+      nba_intel.insert(2, 'rockets') # adds 'rockets" to offset 2
+      
+# delete an item by offset with del()
+      del[1]  # removes the item at offset 1 from the list
+      
+# delete an item by value with remove()
+      nba_intel.remove('spurs')   # removes 'spurs' from the list, no matter where it is located
+      # this is good for when you don't know or care about where a value is located
+      
+# Get an item by offset and delete it using pop()
+      nba_intel.pop()   # pop() by default removes the first item in the list (i.e. is the same as pop(0)
+      nba_intel.pop(1)
+      
+# Find an item's offset by value using index()
+      nba_intel.index('bucks')  # returns 1 (i.e. because the 'bucks' are at offset 1)
+      
+# Test for the existance of a value with in
+      'sixers' in nba_intel  # returns True (or False, depending if 'sixers' is in the list)
+      
+# Count occurences of value by using count()
+      nba_intel.count('sixers')  # returns 1
+      
+# Convert to a string using join()
+      nba_intel = ['sixers', 'lakers', 'rockets' 'spurs']
+      ','.join(nba_intel)
+      # returns 'sixers, 'lakers', 'rockets', 'spurs'
+      
+# reorder items using sort()
+      sorted(nba_intel)  # returns the list sorted by their values (e.g. in this case alphabetical order)
