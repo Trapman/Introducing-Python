@@ -222,6 +222,17 @@ list('Mega') # returns ['M', 'e', 'g', 'a']
            for name, contents in drinks.items():
                   if 'vodka' in contents:
                         print(name)
-      
+                        
+        # Combinations and Operators
+            # use the 'set intersection operator', which is &
+            # useful for checking for combinations of set values.
+            # from example above, find any drink that has a combination of vodka and orange juice
+            for name, contents in drinks.items()
+                  if contents & {'vodka', 'orange juice'}:
+                        print(name)
+            # other useful functions
+                  union()
+                  difference()
+                  exclusive or: ^
       
       
