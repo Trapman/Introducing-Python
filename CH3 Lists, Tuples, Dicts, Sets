@@ -235,4 +235,39 @@ list('Mega') # returns ['M', 'e', 'g', 'a']
                   difference()
                   exclusive or: ^
       
+#Things to do
+
+#1 Create list starting with your year of birth, and each year thereafter until the year of your 5th birthday:
+      years_list = [1984, 1985, 1986, 1987, 1989]
+
+#2 Find your third bday:
+      years_list[3]
+    
+#3 Find the year that you're the oldest:
+      years_list[-1] 
       
+#4 Make a list with thsee three strings as elements:
+      things = ['mozzarella', 'cinderella', 'salmonella']
+
+#5 Capitalize the elements in the list that refer to a person:
+      things[1] = things[1].capitalize()
+      
+#6 Make the elements in the list that refer to cheese all caps:
+      things[0] = things[0].upper()
+      
+#7 Delete the elements in the list that refer to a disease:
+      things.remove('salmonella') # OR del things[-1]
+      
+#8  Create new list:
+      surprise = ['Groucho', 'Chico', 'Harpo']
+    
+#9 Lowercase the last element in the list, then reverse it and capitalize it:
+      surprise[-1] = surprise[-1].lower()
+      surprise[-1] = surprise[-1][::-1]
+      surprise[-1] = surprise[-1].capitalize()
+      
+#10 Make an English to French dictionary:
+      e2f = {'dog' : 'chien', 'cat' : 'chat', 'walrus' : 'morse'}
+      
+#11 Print the French word for Walrus:
+      e2f['walrus']
