@@ -271,3 +271,8 @@ list('Mega') # returns ['M', 'e', 'g', 'a']
       
 #11 Print the French word for Walrus:
       e2f['walrus']
+      
+#12 Create French-to-English dictionary using items method:
+      f2e = {}
+      for english, french in e2f.items():
+      f2e[french] = english
