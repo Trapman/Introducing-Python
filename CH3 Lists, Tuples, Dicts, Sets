@@ -296,6 +296,12 @@ list('Mega') # returns ['M', 'e', 'g', 'a']
             
 #16 Print the top level keys of life:
       print(life.keys())
+      #to print as a plain list: print(list(life.keys())
+     
       
-#17 
+#17 Print the keys for life['animals']:
+      print(life['animals'].keys())
+      
+#18 Print the values for life['animals']['cats']:
+      print(life['animals']['cat']
             
