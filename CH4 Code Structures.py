@@ -33,4 +33,40 @@
       print("I've never heard of this color", color)
       
         
-      
+ #use  == to test equality
+            x = 7
+            x == 5 # returns False
+            
+ # Do multiple comparison with In
+            #if you have a letter and want to know if it's a vowel. IN allows an efficient approach instead of writing it all out
+            
+            #long way:
+            letter = 'o'
+            if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u':
+              print(letter, 'is a vowel')
+            else:
+              print(letter, 'is not a vowel')
+            
+            #pythonic way:
+            vowels = 'aeiou'
+            letter = 'o'
+            letter in vowels # returns True
+            if letter in vowels:
+              print(letter, 'is a vowel')
+            else:
+              print(letter, 'is not a vowel')
+            
+            #you can take the same approach with lists, dicts, sets, tuples etc:
+            vowel_set = {'a', 'e', 'i', 'o', 'u'}
+            vowel_list = ['a', 'e', 'i', 'o', 'u']
+            vowel_tuple = ('a', 'e', 'i', 'o', 'u')
+            vowel_dict = {'a': 'apple', 'e': 'elephant}
+            #vowel in ....    will work for each of these
+                          
+#Repeat using WHILE LOOP
+  count = 1
+  while count <= 5:
+    print(count)
+    count+=1
+   
+         
