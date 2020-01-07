@@ -68,5 +68,10 @@
   while count <= 5:
     print(count)
     count+=1
+                          
+#using BREAK
+  while True:
+    stuff = input('String to capitalize [type q to quit]: ")
+    
    
          
