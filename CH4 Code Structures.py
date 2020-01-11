@@ -15,11 +15,11 @@
         print('It's a cat!')
       else:
         print('It's a dog!!!!')
-    else:
-      if small:
-        print('It's a penguin!')
       else:
-        print('It's a shark!!!')
+        if small:
+          print('It's a penguin!')
+        else:
+          print('It's a shark!!!')
         
   # if there are more than two possibilities, use elif:
     color = 'puce'
@@ -86,7 +86,56 @@
       continue
     print(number, "sqaured is", number*number)
                   
-#check BREAK use with ELSE: the else would be run if the while loop completed but the object was not found
+#check BREAK use with ELSE: if the while loop ended normally (no break), then you can pass an optional ELSE.
+#the else would be run if the while loop completed but the object was not found
+                  numbers = [1, 3, 5]
+                  position = 0 
+                  while position < len(numbers):
+                    if number % 2 == 0:
+                      print('Found an even number', number)
+                      break
+    position += 1
+ else:      # break not called
+  print('No even number found')
+                 
+#Iterate with FOR 
+#you can use on lists, dicts, strings etc.
+                  bets = ['chiefs', 'mavs', 'ravens', 'niners', 'nuggets']
+                  for bet in bets:
+                    print(bet)
+                  
+                  word = 'ethereum'
+                  for letter in word:
+                    print(letter)
+                  
+                  accusation = {'room': 'ballroom', 'weapon': 'knife', 'person': 'trapman'}
+                  for card in accusation:    # or, for card in accusation.keys():
+                    print(card)
+                  
+                  for valies in accusation.values():    # to get values, instead of keys
+                    print(value)
+                  
+                  for item in accusation.items():    #to get key and value in a tuple
+                    print(item)
+                  
+                  for card, contents in accusation.items():      #assign to a tuple in one step
+                    print('Card', card, 'has the contents', contents)
+                  
+                  #you can use BREAK, CONTINUE, ELSE with FOR as well, just like WHILE
+                  cheeses = []
+                  for cheese in cheeses:
+                    print('This shop has some lovely', cheese)
+                    break
+                  else:      # no break means no cheese
+                    print('This is not much of a cheese shop tbh.')
+                  
+#Iterate multiple sequences with zip()
+                  days = []
+                  fruits = []
+                  drinks= []
+                  desserts = []
+                  for day, fruit, drink, dessert in zip(days, fruits, drinks, desserts):
+                    print(day, ": drink", drink, "-eat", fruit, "-enjoy", dessert)
 
   
     
