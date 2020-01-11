@@ -72,6 +72,23 @@
 #using BREAK
   while True:
     stuff = input('String to capitalize [type q to quit]: ")
+    if stuff == 'q':
+       break
+    print(stuff.capitalize())
+                  
+#skip ahead with CONTINUE
+  while True:
+    value = input("Integer, please [q to quit]: ")
+    if value == 'q':      # quit
+      break
+    number = int(value)
+    if number % 2 == 0:   # an even number
+      continue
+    print(number, "sqaured is", number*number)
+                  
+#check BREAK use with ELSE: the else would be run if the while loop completed but the object was not found
+
+  
     
    
          
