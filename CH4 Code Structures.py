@@ -64,17 +64,17 @@
             #vowel in ....    will work for each of these
                           
 #Repeat using WHILE LOOP
-  count = 1
-  while count <= 5:
-    print(count)
-    count+=1
+                          count = 1
+                          while count <= 5:
+                            print(count)
+                            count+=1
                           
-#using BREAK
-  while True:
-    stuff = input('String to capitalize [type q to quit]: ")
-    if stuff == 'q':
-       break
-    print(stuff.capitalize())
+#using BREAK 
+                          while True:
+                            stuff = input('String to capitalize [type q to quit]: ")
+                            if stuff == 'q':
+                              break
+                            print(stuff.capitalize())
                   
 #skip ahead with CONTINUE
   while True:
@@ -130,12 +130,26 @@
                     print('This is not much of a cheese shop tbh.')
                   
 #Iterate multiple sequences with zip()
-                  days = []
-                  fruits = []
-                  drinks= []
-                  desserts = []
+                  days = ['monday', 'tuesday', 'wednesday']
+                  fruits = ['strawberry', 'banana', 'apple']
+                  drinks= ['coffee', 'tea', 'espresso']
+                  desserts = ['tiramisu', 'cake', 'brownie', 'ice cream']
                   for day, fruit, drink, dessert in zip(days, fruits, drinks, desserts):
                     print(day, ": drink", drink, "-eat", fruit, "-enjoy", dessert)
+                                          
+                  #zip() stops when the shortest sequence is done. In this case 'ice cream' would get skipped.
+                                          
+#You can use zip() to walk through multiple sequences and make tuples from items at the same offsets:
+                  english = 'monday', 'tuesday', 'wednesday;
+                  french = 'lundi', 'mardi', 'mercredi'
+                                      
+                  list(zip(english, french)
+                       #returns [('monday', 'lundi'), ('tuesday', 'mardi'...])
+                       
+                  #feed the result of zip() directly to dict() and you can quickly create a new dictionary:
+                  dict(zip(english, french))
+                       
+                       
 
   
     
