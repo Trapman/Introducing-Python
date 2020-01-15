@@ -149,6 +149,29 @@
                   #feed the result of zip() directly to dict() and you can quickly create a new dictionary:
                   dict(zip(english, french))
                        
+#Generate Number Sequences with range():    range( start, stop, step )    step by defaul is 1, use -1 to go backwards
+                       for x in range(0, 3):
+                        print(x)
+                       
+                       for x in range(2, -1, -1):       #counts down from 2 to 0
+                        print(x)
+                       
+                       list(range(0, 11, 2))    #uses step size 2 to get the even numbers from 0 to 10
+                       
+#Comprehensions: just a compact way of creating Python data structures from one or more iterators
+                       
+# List Comprehension
+                       number_list = []
+                       for number in range(1, 6):
+                        number_list.append(number)
+                       
+                       #instead of writing out each step like this:
+                        number_list2 = []
+                        number_list2.append(1)
+                        number_list2.append(2)
+                        
+                       
+                       
                        
 
   
