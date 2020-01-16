@@ -161,14 +161,24 @@
 #Comprehensions: just a compact way of creating Python data structures from one or more iterators
                        
 # List Comprehension
+                        #long way of writing out each step like this:
+                        number_list2 = []
+                        number_list2.append(1)
+                        number_list2.append(2)
+                       
+                       #shorter method of using an iterator and range():
                        number_list = []
                        for number in range(1, 6):
                         number_list.append(number)
                        
-                       #instead of writing out each step like this:
-                        number_list2 = []
-                        number_list2.append(1)
-                        number_list2.append(2)
+                       #pythonic way of using list comprehnsion:
+                       number_list = [number for number in range(1,6)]
+                       
+                       #syntax:
+                       [expression for item in iterable]
+                       [expression for item in iterable if condition]
+                       
+                       
                         
                        
                        
