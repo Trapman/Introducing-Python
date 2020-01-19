@@ -178,6 +178,38 @@
                        [expression for item in iterable]
                        [expression for item in iterable if condition]
                        
+                       number_list = [number for number in range(1,6)]                       #ex1
+                       a_list = [number for number in range(1,6) if number % 2 == 1]         #ex2
+                       
+                       #using nested
+                       #long ex
+                       rows = range(1,4)
+                       cols = range(1,3)
+                       for row in rows:
+                        for col in cols:
+                          print(row, col)
+                       
+                       #pythonic list comp:
+                       rows = range(1,4)
+                       cols = range(1,3)
+                       cells = [(row, col) for row in rows for col in cols]
+                       for cell in cells:
+                        print(cell)
+                       
+#Dictionary Comprehension:
+                       #syntax
+                       { key_expression : value_expression for expression in iterable }
+                       #ex
+                       word = 'letters'
+                       letter_counts = {letter: word.count(letter) for letter in word}
+                       #ex2 includes set() to account for 2 t's in 'letter'
+                       word = 'letters'
+                       letter_counts = {letter: word.count(letter) for letter in set(word)}
+                       
+#Set Comprehension:
+                       
+                      
+                       
                        
                         
                        
