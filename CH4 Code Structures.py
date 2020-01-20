@@ -207,6 +207,75 @@
                        letter_counts = {letter: word.count(letter) for letter in set(word)}
                        
 #Set Comprehension:
+                       #sytnax
+                       { expression for expression in iterable }  #can also include the if condition too
+                       #ex
+                       a_set = {number for nmber in range(1,6) if number % 3 == 1}
+                       
+#Note: tuples DO NOT have comprehensions                       
+                       
+#Generator Comprehension:
+                       #syntax
+                       number_thing = (number for number in range(1,6))
+                       #this is just a way of providing data to an iterator
+                       
+#Functions:
+                       #reusable pieces of code that you DEFINE and then CALL
+                       #basic syntax:
+                       def do_nothing():
+                        pass
+                       
+                       #ex1
+                       def make_a_sound():
+                        print('Woof!')               #make_a_sound() returns Woof!
+                       
+                       #ex2
+                       def agree():
+                        returns True
+                       
+                       if agree():
+                        print('Splendid!')
+                       else:
+                        print('That was unexpected.')       #agree() returns Splendid!
+                       
+                       #ex3
+                       def echo(anything):
+                        return anything + '' + anything
+                       
+                       echo('Henley!')                 #returns 'Henley! Henley!'
+                       
+                       #ex4
+                       def commentary(color):
+                        if color == 'white':
+                          return "It's a Buford"
+                        elif color == 'Blue':
+                          return "It's a Henley"
+                        elif color == 'Lilac':
+                          return "It's an Emi"
+                        else:
+                          return "I've never heard of the color " + color + "."
+                       
+                       #ex5 positional arguments: values are copied to their corresponding parameters in order
+                       def menu (breakfast, lunch, dinner):
+                        return {'breakfast':breakfast, 'lunch':lunch, 'dinner':dinner}
+                       
+                       menu('eggs', 'salad', 'steak')  #returns {'breakfast':'eggs', 'lunch':'salad', 'dinner':'steak'}
+                       #the downside is that you need to remember the meaning of each position, otherwise if we call it, it won't be in correct order
+                       #to avoid this we use keyword arguments
+                       
+                       #ex6 Keyword arguments:
+                       #specify arguments by the names of their corresponding parameters, even in a different order from their definition in the function
+                       menu(breakfast ='eggs', lunch='salad', dinner='steak')
+                       
+                       #ex7 Specify Default Parameter Values
+                       def menu (breakfast, lunch, dinner='steak'):
+                        return {'breakfast':breakfast, 'lunch':lunch, 'dinner':dinner}
+                                
+                                
+                       
+                       
+                       
+                       
                        
                       
                        
