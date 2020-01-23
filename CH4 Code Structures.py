@@ -270,6 +270,17 @@
                        #ex7 Specify Default Parameter Values
                        def menu (breakfast, lunch, dinner='steak'):
                         return {'breakfast':breakfast, 'lunch':lunch, 'dinner':dinner}
+                       
+                       #ex8 Gather Positional Arguments with *
+                       #when used inside the function with a parameter, it groups a variable numner of positional arguments into a tuple of paramater values
+                       def print_args(*args):
+                        print('Positional argument tuple:' , args)
+                       
+                       print_args(3,2,1, 'wait!', 'HAHA')
+                       # returns Positional argument tuple: (3,2,1, 'wait!', 'HAHA')
+                       
+                       #ex9 Gather Keyword Arguments with **
+
                                 
                                 
                        
