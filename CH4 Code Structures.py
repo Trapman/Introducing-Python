@@ -280,6 +280,12 @@
                        # returns Positional argument tuple: (3,2,1, 'wait!', 'HAHA')
                        
                        #ex9 Gather Keyword Arguments with **
+                       #used to gather keyword arguments into a dict, where argument names are the keys, values are the corresponding dict values
+                       def print_kwargs(**kwargs):
+                        print('Keyword arguments:', kwargs)
+                       
+                       print_kwargs(wine='marlot', entree='steak', dessert='cake')
+                       #returns Keyword arguments: {'dessert':'cake', 'wine':'marlot', 'entree':'steak'}
 
                                 
                                 
