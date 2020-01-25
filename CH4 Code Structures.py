@@ -288,7 +288,35 @@
                        #returns Keyword arguments: {'dessert':'cake', 'wine':'marlot', 'entree':'steak'}
                        
                        
-                       finish
+                       #ex10 Doctstrings:
+                       #just documentation for a function
+                       
+                       def print_if_true(thing, check):
+                        '''
+                        Prints the first argument if a second argument is true.
+                        The operation is:
+                          1. check whether the second argument is true
+                          2. if it is, print the first argument
+                        '''
+                       if check:
+                        print(thing)
+                       
+                       #ex11 Inner Functions
+                       #you can definte a function within another function:
+                       def outer(a, b):
+                        def inner(c, d):
+                          return c + d
+                        return inner(a, b)
+                       
+                       outer(4, 7) #returns 11
+                       
+                       def knights(saying):
+                        def inner(quote):
+                          return "We are the knights who say: 's%'" % quote
+                        return inner(saying)
+                       
+                       knights('THIS OUR TERRITORY TBH!')
+                       # returns "We are the knights who say: 'THIS OUR TERRITORY TBH!'
 
                                 
                                 
