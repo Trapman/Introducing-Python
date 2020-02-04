@@ -1,4 +1,4 @@
-# Main Types of Objects Covered here:
+# Main Types of Objects Covered here ###########################
 #booleans
 #integers
 #floats
@@ -59,7 +59,7 @@ coffee.split(',')
 # coffee.split()
 # returns ['la', 'colombe', 'coffee', 'elixr', 'coffee'...]
 
-#join()
+#join() 
 # basically the opposite of split
 # it collapses a list of strings into a single string
 # string.join(list)
