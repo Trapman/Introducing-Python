@@ -330,6 +330,41 @@
                        #EX13 lambda() function
                        # annonymous functions expressed as a single statement. You can use it instead of a normal tiny function
                        
+                       def edit_story(words, func):
+                        for word in words:
+                          print(func(word))
+                       
+                       bets = ['lakers', 'nuggets', 'nets', 'celtics']
+                       
+                       def enliven(word):     # capitalizes each word
+                        return word.capitalize() + '!'
+                       
+                       #we could replace the last part with a lambda:
+                       edit_story(bets, lambda word: word.capitalize() + '!')
+                       
+                       #EX14 Generators
+                       # is a sequence creation object. You can iterate through huge sequences without creating and storing them
+                       # generators are often the source of data for iterators
+                       # range() is an example of a generator
+                       
+                       sum(range(1,101))
+                       
+                       # generator function: for really large sequences. Used 'yield'
+                       def my_range(first = 0, last = 10, step = 1):
+                        number = first
+                        while number < last:
+                          yield number
+                       
+                       #EX15 Decorators
+                       # modify existing function withou changing its source code.
+                       # common use is adding a debugging statement 
+                       # takes one function as input and returns another function
+                       
+                       # the function document_it() defines a decaorator that will run (see p. 103)
+                       
+                       #EX16 Namespaces and Scope
+                       
+                       
 
                                 
                                 
