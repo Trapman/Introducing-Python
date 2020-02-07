@@ -1,5 +1,6 @@
 #comment
 # continuation character: \
+################################################################################################
 # compare with if, elif, else:  these just check whether a condition is True
   disaster = True
     if disaster:
@@ -36,7 +37,7 @@
  #use  == to test equality
             x = 7
             x == 5 # returns False
-            
+################################################################################            
  # Do multiple comparison with In
             #if you have a letter and want to know if it's a vowel. IN allows an efficient approach instead of writing it all out
             
@@ -63,7 +64,7 @@
             vowel_dict = {'a': 'apple', 'e': 'elephant}
             #vowel in ....    will work for each of these
                           
-#Repeat using WHILE LOOP
+#Repeat using WHILE LOOP ##################################################################################
                           count = 1
                           while count <= 5:
                             print(count)
@@ -98,7 +99,7 @@
  else:      # break not called
   print('No even number found')
                  
-#Iterate with FOR 
+#Iterate with FOR #####################################################################################
 #you can use on lists, dicts, strings etc.
                   bets = ['chiefs', 'mavs', 'ravens', 'niners', 'nuggets']
                   for bet in bets:
