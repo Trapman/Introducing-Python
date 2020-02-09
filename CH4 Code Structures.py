@@ -419,10 +419,55 @@ for value in [3,2,1,0]:
 #4.4.                       
 even = [number for number in range(10) if number % 2 == 0]                      
                        
+#4.5                       
+squares = { key : key*key for key in range(10)}
+                                          
+#4.6                       
+odds = {number for number in range(10) if number % 2 == 1} \
                        
+#4.7                       
+for thing in ('GoT %s' % number for number in range(10)):                       
+  print(thing)                       
+
+#4.8                       
+def good:
+  return['Mega', 'Trap', 'Hoang']                       
+                                              
+#4.9
+def get_odds():                       
+  for number in range(1, 10, 2):                        
+    yield number                     
                        
+count = 1
+for number in get_odds():                       
+  if count == 3:                       
+    print("The third odd number is", number)                     
+    break                   
+  count += 1
                        
+ #4.10                     
+ def test(func):                     
+  def new_func(*args, **kwargs):                      
+    print('start')                     
+    result = func(*args, **kwargs):                   
+    print('end')                   
+    return result                   
+  return new _func                     
                        
+#4.11                       
+class OopsException(Exception):                       
+  pass
                        
+raise OopsException()                       
+                         
+try:                       
+  raise Exception()                       
+except OopsException:                       
+  print('Caught an oops')                       
+                       
+#4.12                       
+titles = ['Rick and Morty', 'Sopranos']
+plots = ['A man and his grandson explore space', 'A mob family affair']
+shows = dict(zip(titles, plots))                       
                        
                        
