@@ -363,12 +363,14 @@
                        
                        # the function document_it() defines a decaorator that will run (see p. 103)
                        
-                       #EX16 Namespaces and Scope
-                       
-                       
-
-                                
-                                
+#Handling Errors with TRY and EXCEPT ##############################################################
+# it's good practice to add exception handling wherever possible                       
+short_list = [1,2, 3]
+position = 5                       
+try:                       
+  short_list[position]
+except:                                
+  print("Need a position between 0 and", len(short_list)-1, "but got", position)                              
                        
                        
                        
