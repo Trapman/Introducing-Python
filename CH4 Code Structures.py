@@ -370,21 +370,59 @@ position = 5
 try:                       
   short_list[position]
 except:                                
-  print("Need a position between 0 and", len(short_list)-1, "but got", position)                              
+  print("Need a position between 0 and", len(short_list)-1, "but got", position)   
                        
-                       
-                       
-                       
-                       
-                      
-                       
-                       
-                        
-                       
-                       
-                       
+# if more than one exception could occur it's best to include a separate handler for each
+# you can get the full exception object name in the variable name with this basic syntax:                       
+except exceptiontype as name
 
-  
-    
-   
+short_list = [1,2,3]                       
+while True:                       
+  value = input('Position [q to quit]? ')                       
+  if value == 'q'                     
+    break                     
+  try:                     
+    position = int(value)                    
+    print(short_list[position])                    
+  except IndexError as err:                       
+    print('Bad Index: ', position)                     
+  except Exception as other:                     
+    print('Something else broke:', other)
+      
+# PRACTICE #############################################################################
+#4.1 
+7 = guess_me
+if guess_me > 7:
+  print("too high")
+elif guess_me < 7:
+    print("too low")                       
+else:    
+  print("just right")   
          
+#4.2
+7 = guess_me
+1 = start  
+while True:
+  if start < guess_me:
+    print("too low")
+  elif start == guess_me:
+    print("found it!")
+  elif start > guess_me:                       
+    print("oops, too high!") 
+    break
+  start += 1
+                       
+#4.3
+for value in [3,2,1,0]:
+  print(value)                       
+                                              
+#4.4.                       
+even = [number for number in range(10) if number % 2 == 0]                      
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
