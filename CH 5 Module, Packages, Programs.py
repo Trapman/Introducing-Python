@@ -22,3 +22,37 @@ def get_description():
   from random import choice
   possibilities = ['snow', 'rain', 'sleet', 'sunny', 'fog']
   return choice(possibilities)
+
+# IMPORT MODULE AS A DIFFERENT NAME ##################################
+import report as wr
+description = wr.get_description()
+print("Today's weather: ", description)
+
+# IMPORT ONLY WHAT YOU WANT FROM A MODULE ################################
+from report import get description
+description = wr.get_description()
+print("Today's weather: ", description)
+
+from report import get description as do_it   # you can also alias it
+description = do_it()
+print("Today's weather: ", description)
+
+# PACKAGES ##############################################################
+# let's use different types of text forecasts: one for the next day, one for the next week
+# make a directory named sources, create two modules within it: daily.py, weekly.py
+# each has a function called forecast
+from sources import daily, weekly
+
+print("Daily Forecast: " , daily.forecast())
+print("Weekly Forecast: ")
+
+for  number, outlook in enumerate(weekly.forecast(), 1):
+   print(number, outlook)
+    
+def forecast(): 
+  'fake daily forecast'
+  return 'like yesterday'
+
+def forecast():
+  """Fake weekly forecast"""
+  return ["snow", "rain", "sleet", "freezing rain", "hail"]
