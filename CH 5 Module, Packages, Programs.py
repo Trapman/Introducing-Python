@@ -56,3 +56,12 @@ def forecast():
 def forecast():
   """Fake weekly forecast"""
   return ["snow", "rain", "sleet", "freezing rain", "hail"]
+
+# HANDLING MISSING KEYS WITH SETDEFAULT() AND DEFAULTDICT() ###########################################
+get() #when accessing a dictionary with a missing/nonexistant key it raises an error, get() returns a default value to avoid the exception
+setdefault() # is like get() but ALSO assigns an item to the dict if the key is missing
+
+
+
+
+
