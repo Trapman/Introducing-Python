@@ -117,7 +117,21 @@ quotes = OrderedDict([
 for bul in quotes:
   print(bul)
        
+# STACK + QUEUE == DEQUE (look into this) #######################
+# basically is a double-ended queue which has features of both a stack and queue.
+# it's useful if you want to add and delete items from either end of a sequence
+def palindrome(word):
+  from collections import deque
+  dq = deque(word)
+  while len(dq) > 1:
+    if dq.popleft() != dq.pop():
+      return False
+  return True
 
+# ITERATE OVER CODE STRUCTURES WITH ITERTOOLS ##################################
+# contains special-purpose iterator functions
+# each returns one item at a time called within a for loop
+# chain() runs through its arguments as though they were a single iterable
 
 
 
