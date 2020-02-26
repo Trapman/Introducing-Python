@@ -132,7 +132,7 @@ def palindrome(word):
 # contains special-purpose iterator functions
 # each returns one item at a time called within a for loop
 # chain() runs through its arguments as though they were a single iterable
-
+ # finish typing out
 
 
 
