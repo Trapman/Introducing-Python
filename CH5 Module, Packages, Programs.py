@@ -117,7 +117,7 @@ quotes = OrderedDict([
 for bul in quotes:
   print(bul)
        
-# STACK + QUEUE == DEQUE (look into this) #######################
+# STACK + QUEUE == DEQUE (look into this) #####################################################
 # basically is a double-ended queue which has features of both a stack and queue.
 # it's useful if you want to add and delete items from either end of a sequence
 def palindrome(word):
@@ -128,12 +128,80 @@ def palindrome(word):
       return False
   return True
 
-# ITERATE OVER CODE STRUCTURES WITH ITERTOOLS ##################################
-# contains special-purpose iterator functions
-# each returns one item at a time called within a for loop
-# chain() runs through its arguments as though they were a single iterable
- # finish typing out
 
+# ITERTOOLS() ############################################################################
+# special-purpose iterator functions
+# each returns one item at a time within a for loop
+# chain() runs through them as if they were a single iterable
+import itertools
+for item in itertools.chain([1,2], ['a', 'b']):
+    print(item)
+    
+#cycle()
+# infinite iterator, cycling through its arguments
+import itertools
+for item in itertools.cycle([1, 2]):
+    print(item)
+    
+#accumulate()
+# calculates accumulated values
+# by default, it calculates the sum
+import itertools
+for item in itertools.accumulate([1,2,3,4]):
+    print(item)
+    
+# you can apply a function to accumulate() to get it to do something else
+# multply
+import itertools
+def multiply(a,b):
+    return a * b
+
+for item in itertools.accumulate([1,2,3,4], multiply):
+    print(item)
+    
+# PPRINT() ##############################
+# pretty printer
+from pprint import pprint
+from collections import OrderedDict
+quotes = OrderedDict([
+        ('Trap', "let's get paid, buls"),
+        ('bradley', 'oh arrrrd'),
+        ('dan', 'naw we not doing all that')
+        ])
+pprint(quotes)
+
+# CODE EXAMPLES #################################
+#(1)
+def hours():
+    print('Open 9-5 daily')
+    
+import zoo
+zoo.hours()
+
+#(2)
+import zoo as menagerie
+menagerie.hours()
+
+#(3)
+from zoo import hours
+
+#(4)
+from zoo import hours as info
+info()
+
+#(5)
+plain = {'a':1, 'b':2, 'c':3, 'd':4, 'e':5}
+
+#(6)
+from collections import OrderedDict
+fancy = OrderedDict([('a',1), ('b',2), ('c',3), ('d',4), ('e',5)])
+fancy
+
+#(7)
+from collections import defaultdict
+dict_of_lists = defaultdict(list)
+dict_of_lists['a'].append('something for a')
+print(dict_of_lists['a'])
 
 
 
