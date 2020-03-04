@@ -1,7 +1,7 @@
 #lists   can be changed
 #tuples  are immutable
 
-#(1) Lists
+#(1) Lists #################
 # good for keeping track of things by their order, especially when the order and the contents can change 
 # you can always make changes by adding/deleting/overwriting any of the list's contents
 # create with [] or list()
