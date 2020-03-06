@@ -1,0 +1,127 @@
+# OBJECTS AND CLASSES #######################
+# everything in Python is an object
+# objects contain data (variables, called attributed)
+# and they contain code (functions, called methods)
+# when you create a new object that no one ever has, you need to create a class, which indicates what this object contains
+
+# Define a Class with class
+class Person():
+    def __init__(self):       #init initialized an individual object from its class definition. The self argument specifies that 
+        pass
+    
+class Person():
+    def __init__(self, name):       # the first parameter is always 'self', followed by any other parameter you want to include
+        self.name = name
+    
+# now we can create an object from the Person class, by passing a string for the name parameter
+officer = Person('Bradley DeStefano')
+
+# read and write the object directly like this:
+print('The newest officer: ', officer.name)
+
+# add some more parameters
+class Person():
+    def __init__(self, name, age, race):       # the first parameter is always 'self', followed by any other parameter you want to include
+        self.name = name
+        self.age = age
+        self.race = race
+        
+officer = Person('Bradley DeStefano', 28, 'M')
+print('The newest officer: ', officer.name, officer.age, officer.race)
+
+#INHERITANCE #############################################################
+# inheritance creates a new class from an existing class, but with some additions or changes
+# you only define what you need to add or change in the new class
+# original class is the PARENT
+# new class is the CHILD
+
+class Car():
+    def exclaim(self):
+        print("I am a car!")
+        
+class Tesla(Car):
+    pass
+
+give_me_a_car = Car()
+give_me_a_tesla = Tesla()
+give_me_a_car.exclaim()
+give_me_a_tesla.exclaim()
+
+# OVERIDE A METHOD ##################################################
+# this is for replacing or overriding a parent method when making a child class
+class Car():
+    def exclaim(self):
+        print("I am a car!")
+        
+class Tesla(Car):
+    def exclaim(self):
+        print("I am a Tesla, a much newer version of a traditional car!")
+
+give_me_a_car = Car()
+give_me_a_tesla = Tesla()
+give_me_a_car.exclaim()
+give_me_a_tesla.exclaim()
+
+# another example
+class Person():
+    def __init__(self, name):
+        self.name = name
+
+class DRPerson(Person):
+    def __init__(self, name):
+        self.name = 'Doctor' + name
+        
+class HooperPerson(Person):
+    def __init__(self, name):
+        self.name = 'NBA Player, ' + name
+        
+person = Person('Bradley')
+doctor = DRPerson('Casey')
+hooper = HooperPerson('Dan')
+print(person.name)
+print(doctor.name)
+print(hooper.name)
+
+# adding a method
+class Car():
+    def exclaim(self):
+        print("I am a car!")
+        
+class Tesla(Car):
+    def exclaim(self):
+        print("I am a Tesla, a much newer version of a traditional car!")
+    def gas_saver_mode(self):
+        print("GAS SAVER MODE ACTIVATED.")
+
+give_me_a_car = Car()
+give_me_a_tesla = Tesla()
+give_me_a_car.exclaim()
+give_me_a_tesla.exclaim()
+give_me_a_tesla.gas_saver_mode()
+
+# SUPER() #############################################################
+# allows you to call the parent method
+class Person():
+    def __init__(self, name):
+        self.name = name
+        
+class EmailPerson(Person):
+    def __init__(self, name, email):
+        super().__init__(name)         #gets the definition of the parent class, Person
+        self.email = email
+        
+trap = EmailPerson('Trap Megafund', 'trapman@gmail.com')
+trap.name
+trap.email
+
+# GET and SET attributes with properties
+class Duck():
+    def __init__(self, input_name):
+        self.hidden_name = input_name
+    def get_name(self):
+        print(inside the getter')
+        return self.hidden_name
+    def set_name(self, input_name):
+        print('inside the setter')
+        self.hidden_name = input_name
+    name = property(get_name, set_name)
