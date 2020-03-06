@@ -95,9 +95,9 @@
                     if number % 2 == 0:
                       print('Found an even number', number)
                       break
-    position += 1
- else:      # break not called
-  print('No even number found')
+                      position += 1
+                    else:      # break not called
+                      print('No even number found')
                  
 #Iterate with FOR #####################################################################################
 #you can use on lists, dicts, strings etc.
