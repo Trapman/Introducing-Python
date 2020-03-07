@@ -1,0 +1,14 @@
+# WRANGLING DATA
+
+# Formatting #######################
+
+# OLD STYLE WITH % ########################################
+
+# conversion types
+%s # string
+'%s' % 42 # returns '42'
+'s%' % 7.03 # returns '7.03'
+
+%d # decimal
+%f # decimal float
+'f%' % 7.03 # returns 7.03000000
