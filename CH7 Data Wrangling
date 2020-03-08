@@ -1,4 +1,4 @@
-# WRANGLING DATA
+# MANGLING DATA
 
 # Formatting #######################
 
@@ -10,5 +10,105 @@
 's%' % 7.03 # returns '7.03'
 
 %d # decimal
+'d%' % 42
 %f # decimal float
 'f%' % 7.03 # returns 7.03000000
+
+
+#string and integer interpolation
+actor = 'Tom Cruise'
+cat = 'Holly'
+weight = 15
+
+'One of my favorite actors is %s' % actor
+'My cat %s weights %s pounds' % (cat, weight)
+# the %s inside the string means to interpolate a string
+# the number of % appearances in the string needs to match the number of data items after the %
+# multiple data must be grouped into a tuple, like (cat, weight)
+
+n = 84
+f = 12.24
+s = 'Big Buford'
+
+'%d %f %s' % (n, f, s)
+
+# NEW STYLE WITH {} and FORMAT ##############################################
+n = 84
+f = 12.24
+s = 'Big Buford'
+'{} {} {}' .format(n, f, s)
+
+# you can specify the order
+'{2} {0} {1}' .format(f, s, n)
+
+# the arguments can be named arguments 
+'{n} {f} {s}' .format(n=84, f = 12.24, s = 'Big Buford')
+
+# the arguments can be dictionaries
+d = {'n':84, 'f': 12.24, 's': 'Big Buford'}
+'{0[n]} {0[f]} {0[s]} {1}' .format(d, 'other')
+# {0} is the entire dictionary
+# {1} is the string 'other' that follows the dictionary
+
+# REGULAR EXPRESSIONS #######################################
+# import re
+# match(), findall(), split(), sub()
+
+import re
+result = re.match("You", "Young Frankenstein")
+# 'You' is the string pattern you're looking for
+# 'Young Frankenstein' is the source you're searching through
+
+# use compile for more complex matches, speeds things up
+import re
+youpattern = re.compile('You')
+result = you.pattern.match('Young Frankenstein')
+
+# search(): returns the first match, if any
+# findall(): returns a list of all non-overlapping matches, if any
+# split(): splits source at matches with pattern and returns a list of the string pieces
+# sub(): takes another replacement argument, and changes all parts of source that are matched by pattern to replacement
+
+# exact match with match():
+# does this string begin with the word 'You'?
+
+import re
+source = 'Young Frankenstein'
+m = re.match('You', source)    # match starts at teh beginning of source
+if m:                          # if match returns an object, then print
+    print(m.group())
+    
+import re
+source = 'Young Frankenstein'
+m = re.match('Frank', source)    # match starts at the beginning of source
+if m:                          
+    print(m.group())
+# returns nothing since match() only search at the beginning of source
+    
+# use search():
+import re
+source = 'Young Frankenstein'
+m = re.search('Frank', source)    # search looks at entire source 
+if m:                         
+    print(m.group())
+    
+# findall() will retrieve all matches
+import re
+source = 'Young Frankenstein'
+m = re.findall('n', source)    # findall() returns a list  
+if m:                         
+    print(m)
+
+# split() to split at matches
+import re
+source = 'Young Frankenstein'
+m = re.split('n', source)    # split() will split a string into a list by a pattern  
+if m:                         
+    print(m)
+    
+# sub() to replace matches 
+import re
+source = 'Young Frankenstein'
+m = re.sub('n', '?', source)    # sub() will replace every 'n' with '?'
+if m:                         
+    print(m)  
