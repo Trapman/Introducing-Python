@@ -1,0 +1,7 @@
+# before reading or writing a file, you need to open it
+fileobject = open(filename, mode)     # mode is just the file's type and what you want to do with it
+
+# modes
+# r is for read
+# w is for write. If the file doesn't exist, it's created. If it does exist, it's  overwritten. a
+# x means write, but only if the file does NOT already exist
