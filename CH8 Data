@@ -5,3 +5,4 @@ fileobject = open(filename, mode)     # mode is just the file's type and what yo
 # r is for read
 # w is for write. If the file doesn't exist, it's created. If it does exist, it's  overwritten. a
 # x means write, but only if the file does NOT already exist
+ # finish building these out
