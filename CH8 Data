@@ -1,8 +1,48 @@
 # before reading or writing a file, you need to open it
 fileobject = open(filename, mode)     # mode is just the file's type and what you want to do with it
 
-# modes
+# the first letter of the mode in open() is for the operation:
 # r is for read
 # w is for write. If the file doesn't exist, it's created. If it does exist, it's  overwritten. a
 # x means write, but only if the file does NOT already exist
- # finish building these out
+ 
+# the second letter is for the file's type: 
+# t (or just leaving it blank) is for text
+# b is for binary
+
+# write a text file with write()
+lyrics = '''What was it like to see,
+The face of your own stability,
+Suddenly walk away,
+Leaving you with the dead and hopeless.'''
+
+# write the entire set of lyrics to the file 'jimmy' in one call:
+tool = open('jimmy', 'w')
+tool.write(lyrics)
+tool.close()
+# write() returns the # of bytes written, and adds NO spaces or new lines: print() does though
+
+# you can also print() to a text file:
+tool = open('jimmy', 'w')
+print(lyrics, file = tool)
+tool.close()
+
+# print() uses default new spaces and lines unless you tell it not to:
+tool = open('jimmy', 'w')
+print(lyrics, file = tool, sep='', end='')
+tool.close()
+
+# prevent overwriting a file by using MODE X:
+tool = open('jimmy', 'x')
+
+# build MODE X into an exception
+try:
+    tool = open('jimmy', 'x')
+    tool.write('stomp stomp stomp')
+except FileExistsError:
+    print('jimmy already exists! You almost overwrote it!!')
+    
+# Read a text file with read(), readline(), or readlines() ######################
+
+
+
