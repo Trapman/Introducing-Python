@@ -43,6 +43,16 @@ except FileExistsError:
     print('jimmy already exists! You almost overwrote it!!')
     
 # Read a text file with read(), readline(), or readlines() ######################
+# read() with no arugments will just read the entire file at once. Not great for large files
+tool = open('jimmy', 'rt')
+lyrics = tool.read()
+
+# You can provide a max count to limit how much read() returns:
+lyrics = ''
+tool = open('jimmy', 'rt)
+chunk = 100
+while True:
+
 
 
 
