@@ -53,6 +53,89 @@ tool = open('jimmy', 'rt)
 chunk = 100
 while True:
 
+# You can provide a max count to limit how much read() returns:
+lyrics = ''
+tool = open('jimmy', 'rt')
+chunk = 100
+while True:
+    fragment = tool.read(chunk)
+    if not fragment:
+        break
+    lyrics += fragment
+tool.close()
+len(lyrics)
 
+# you can also read the file line by line with readline()
+lyrics = ''
+tool = open('jimmy', 'rt')
+while True:
+    line = tool.readline()
+    if not line:
+        break
+    lyrics += line
+tool.close()
+len(lyrics)
+
+# the easiest way to read a text file is to use an iterator
+lyrics = ''
+tool = open('jimmy', 'rt')
+for line in tool:
+    lyrics += line
+    
+tool.close()
+len(lyrics)
+
+# close files automatically by using with
+with open('jimmy', 'rt'):
+    tool.write(lyrics)
+    
+#CSV Files ##################################################################
+# read a write a list of rows, each containing a list of columns:
+import csv
+villains = [
+        ['Doctor', 'Doom'],
+        ['Wade', 'Davis'],
+        ['Mister', 'Sinister'],
+        ['Eric', 'Magneto'],
+        ]
+with open('villains', 'wt') as fout:
+    csvout = csv.writer(fout)
+    csvout.writerows(villains)
+# this creates the villains file, with the first and last names written out
+# now we will read this file back in
+import csv
+with open('villains', 'rt') as fin:     #content manager
+    cin = csv.reader(fin)
+    villains =  [row for row in cin]   # this uses a list comp
+print(villains)
+
+# using reader() & writer() with their default options, the colums are separated by commans and the rows by line feeds
+# the data can also be a list of dicts rather than a list of lists
+# use DictReader() instead and specify column names
+import csv
+with open('villains', 'rt') as fin:
+    cin = csv.DictReader(fin, fieldnames = ['first', 'last'])
+    villains = [row for row in cin]
+print(villains)
+
+# we can rewrite the CSV by using the DictWriter() function. 
+# And we can use writeheader() to write an initial line of column names to the CSV file
+import csv
+villains = [
+        {'first': 'Doctor', 'last':'Doom'},
+        {'first': 'Wade', 'last':'Davis'},
+        {'first': 'Mister', 'last':'Sinister'},
+        {'first': 'Eric', 'last':'Magneto'},
+        ]
+with open('villains', 'wt') as fout:
+    cout = csv.DictWriter(fout, ['first', 'last'])
+    cout.writeheader()
+    cout.writerows(villains)
+#now read it back
+import csv
+with open('villains', 'rt') as fin:
+    cin = csv.DictReader(fin)
+    villains = [row for row in cin]
+print(villains)
 
 
