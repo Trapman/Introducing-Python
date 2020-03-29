@@ -138,4 +138,18 @@ with open('villains', 'rt') as fin:
     villains = [row for row in cin]
 print(villains)
 
+# relational databases ############################
+#DB-API
+# this is Python's standard API for accessing relational databases
+# main functions:
+connect()  #make a connection to the db; can include arugments like username, password, server address etc
+cursor()   #creates a cursor object to manage queries
+execute() and exectutemany()  #run one of more SQL commands agains the db
+fetchone(), fetchmany(), fetchall()  # get the results from execute
+
+#SQLite
+#MySQL
+#SQLAlchemy
+#PostgreSQL
+#NoSQL
 
