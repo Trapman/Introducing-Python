@@ -1,0 +1,29 @@
+# The Web
+# test with the ancient telnet program
+$ telnet www.google.com 80
+# if there is a web server on port 80 at google.com, telnet will print something out to confirm it
+
+# now type an actual HTTP command for telnet to send to the Google web server
+HEAD / HTTP/1.1
+# this will get info about the home page
+
+# python's standard web libraries
+http # manages all the client-server HTTP details:
+    client #does all the client-side stuff
+    server #helps you write Python web servers
+    cookies #manages cookies
+    cookiejar #manages cookies
+
+urllib # runs on top of http
+    request #handles the client request
+    response #handles the server response
+    parse #cracks the parts of a URL
+    
+#example: using standard library to get something from a website
+import urllib.request as ur
+from urllib.parse import quote
+import json
+
+title = input('Type a movie title: ')
+url = 'http://www.omdbapi.com/?t=%s' % quote(title)
+conn = ur.urlopen(url)
