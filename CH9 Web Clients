@@ -27,3 +27,67 @@ import json
 title = input('Type a movie title: ')
 url = 'http://www.omdbapi.com/?t=%s' % quote(title)
 conn = ur.urlopen(url)
+print(conn.status)
+
+# 200 means everything worked correctly 
+# 1xx is about information
+# 2xx is success, with other details
+# 3xx is a redirection
+# 4xx is a client error 
+# 5xx is a server error
+
+# to get the actual data contents from a web page, use read() on the conn variable"
+data = conn.read()
+print(data)
+
+# in this example, we get JSON data back. We can work with it like this:
+try:
+    str_data = data.decode('utf8')
+    js_data = json.loads(str_data)
+    print('title:', js_data['Title'])
+    print('plot:', js_data['Plot'])
+except:
+    print('Sorry, no match for', title)
+    
+# beyond the standard library: Requests
+# use case for accessing an API
+# install: $ pip install requests
+import requests
+import json
+
+url = 'http://www.omdbapi.com'
+title = input('Enter a movie title: ')
+args = {'t': title}
+resp = requests.get(url, params = args)
+resp
+js_data = resp.json()
+try:
+    print('title:', js_data['Title'])
+    print('plot':, js_data['Plot'])
+except:
+    print('Sorry, there is no match for', title)
+    
+# Webcrawling and Webscraping: BeautifulSoup
+$ pip install beautifulsoup4
+
+#use case: use beautifulsoup to get all of the links from a webpage
+# use the function get_links() to do all the heavy lifting
+def get_links(url):
+    import requests
+    from bs4 import BeautifulSoup as soup
+    result = requests.get(url)
+    page = result.text
+    doc = soup(page)
+    links = [element.get('href') for element in doc.find.all('a')]
+    return links
+
+if __name__== '__main__':
+    import sys
+    for url in sys.argv[1:]:
+        print('Links in', url)
+        for num, link in enumerate(get_links(url), start = 1):
+            print(num, link)
+        print()
+
+# save it as something like links.py
+# then run it like this: $ python links.py http:/boingboing.net
