@@ -1,0 +1,68 @@
+#Files #############################################
+
+# create with open(): file input/output #####################
+# create a text file called oops.txt
+fout = open('oops.txt', 'wt')
+print('Oops, I created a file.', file=fout)
+fout.close()
+
+# let's perform some tests on this new file ###########
+# exists() : check for whether it exists
+import os
+os.path.exists('oops.txt')
+
+# isfile() : check the type 
+name = 'oops.txt'
+os.path.isfile(name)
+
+# isdir() : to determine the directory
+# single dot (.) is shorthand for current directory
+# two dots (..) is shorthand for the parent directory
+os.path.isdir('.')
+
+# copy() : creates a copy 
+# you have to call it from another module, shutil
+# example: copy the file oops.txt to the file ohno.txt
+import shutil
+shutil.copy('oops.txt', 'ohno.txt')
+
+# rename()
+import os
+os.rename('oops.txt', 'ohno.txt')
+
+# remove() : deletes a file 
+os.remove('oops.txt')
+
+# directories ######################################
+# mkdir() : create a directory
+os.mkdir('poems')
+os.path.exists('poems')
+
+# rmdir() : deletes a directory
+os.rmdir('poems')
+
+# listdir() : list contents
+os.listdir('poems')
+
+# make a subdirectory:
+os.mkdir('poems/milton')
+os.listdir('poems')
+
+# create a file in this subdirectory:
+fout = open('poems/milton/paradise_lost', 'wt')
+fout.write('''Here is a bunch of text,
+           from this fine book,
+           it goes on and on,
+           til it is through.
+           ''')
+fout.close()
+# now when we get something when we run os.listdir('poems/milton')
+
+# chdir() : to change directory
+import os
+os.chdir('poems')
+os.listdir('milton')
+os.listdir('.')   # so now when we check, we'll be in milton
+
+
+
