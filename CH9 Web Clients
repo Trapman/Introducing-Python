@@ -1,5 +1,5 @@
 # The Web
-# test with the ancient telnet program
+# test with the ancient telnet program ########################################################
 $ telnet www.google.com 80
 # if there is a web server on port 80 at google.com, telnet will print something out to confirm it
 
