@@ -64,5 +64,40 @@ os.chdir('poems')
 os.listdir('milton')
 os.listdir('.')   # so now when we check, we'll be in milton
 
+# glob() : use to list matching files
+# this uses Unix shell rules:
+# * matches everything
+# ? matches a single character
+# [abc] matches character a, b , or c
+# [!abc] matches any character except a, b, or c
+
+# use case: get all files or directories that being with 'm'
+import glob
+glob.glob('m*')
+
+# match any two-letter files
+glob.glob('??')
+
+# match any 8 letter word that beings with an 'm' and ends with an 'e'
+glob.glob('m??????e') 
+
+# anything that begins with k, l, or , and ends with e
+glob.glob('[klm]*e')
+
+#Calendars and Clocks #######################################
+# datetime module: includes 4 main objects
+    # date : for years, months, days
+    # time : for hours, minutes, seconds
+    # datetime : for dates and times together
+    # timedelta : for date/time intervals
+
+from datetime import date
+halloween = date(2014, 10, 31)
+halloween.day
+halloween.month
+halloween.year
+
+# isoformat()
+halloween.isoformat()  # to print it in the form '2014-10-31'
 
 
