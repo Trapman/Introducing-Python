@@ -1,0 +1,51 @@
+# Finding Python code ####################
+# first place to look is the Python Package Index (PyPi)
+# this is where pip looks 
+# check pypi.python.org
+# next place is to check GitHub
+# Popular Python Recipes is also good 
+
+# Installing Packages ###########################
+# 1. pip    (e.g. $ pip install flask)
+# 2. package manager for your OS
+# 3. install from source
+
+# Name and Document #################################################################
+# name variables in all caps, separated by _ :  MEGA_FUND = 100000000000
+
+# Testing your code ##################################################################
+# these check for actual code errors as well as faux paus/style issues: pylint, pyflakes, pep8
+$ pip install pylint
+$ pip install pyflakes
+
+# test the logic of your code with unittest
+
+# write a module that capitalizes words
+def just_cap_it(text):
+  return text.capitalize()
+  #save as test_cap.py
+
+import unittest
+import cap
+
+class TestCap(unittest.TestCase):
+
+  def setUp(self):
+    pass
+    
+  def tearDown(self):
+    pass
+    
+  def test_one_word(self):
+    text = 'bulldog'
+    result = cap.just_cap_it(text)
+    self.assertEqual(result, 'Bulldog')
+    
+  def test_multiple_words(self):
+    text = 'a veritable pack of bulldogs'
+    result = cap.just_cap_it(text)
+    self.assertEqual(result, 'A Veritable Pack Of Bulldogs')
+    
+    
+if __name__ == '__main__':
+  unittest.main()
