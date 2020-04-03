@@ -100,4 +100,52 @@ halloween.year
 # isoformat()
 halloween.isoformat()  # to print it in the form '2014-10-31'
 
+# today()
+from datetime import date
+now = date.today()
+
+# timedelta()
+from datetime import date
+from datetime import timedelta
+now = date.today()
+one_day = timedelta(days=1)
+tomorrow = now + one_day
+# tomorrow returns the date of tomorrow
+now + 17*one_day
+# returns 17 days from today's date
+yesterday = now - one_day
+
+# now() : use this method to get the current date and time
+from datetime import datetime
+now = datetime.now()
+now.month
+now.day
+now.hour
+now.minute
+
+# combine() : to merge a date object and a time object into a datetime object
+from datetime import datetime, date, time
+noon = time(12)
+this_day = date.today()
+noon_today = datetime.combine(this_day, noon)
+noon_today
+
+# you can pull the date and time from a datetime by using date() and time() methods
+noon_today.date()
+noon_today.time()
+
+# time module ###################################
+# this is kind of confusing since there's a datetime module with a time function
+# the time module is for representing absolute time
+import time
+now = time.time()
+now
+
+time.ctime(now)  # convert into a string
+
+# read and write dates and times ################################
+import time
+now = time.time()
+time.ctime(now)
+
 
